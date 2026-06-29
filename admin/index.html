@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swad Restro - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/698504344_122097109131319702_8429580545516771912_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=PvD1CAXnWBQQ7kNvwFWk1vY&_nc_oc=AdqgKTmpi9T53tNGn6mm5JWZ5q3y0ENrlwxGnXNbHBDcaSWsth6dt1AFMoZgn9sYHxhXMhER9bIoYgFAzm5DNZPh&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=43qTCwIFFCnyRs5WoMX4Mw&_nc_ss=7b2a8&oh=00_Af_YzRlXIDTUO5ZLCL13Or7QamSV2hXtjKBUTQhonHZ-qw&oe=6A41AC0E" alt="Logo" class="sidebar-logo">
+                <h3>Swad Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="#" class="nav-item" data-page="orders">
+                    <i class="fas fa-shopping-bag"></i> Orders
+                </a>
+                <a href="#" class="nav-item" data-page="menu">
+                    <i class="fas fa-utensils"></i> Menu Items
+                </a>
+                <a href="#" class="nav-item" data-page="reservations">
+                    <i class="fas fa-calendar-check"></i> Reservations
+                </a>
+                <a href="#" class="nav-item" data-page="loyalty">
+                    <i class="fas fa-crown"></i> Loyalty
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2 id="pageTitle">Dashboard</h2>
+                <div class="header-actions">
+                    <span class="admin-badge">Admin</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <div class="admin-content" id="adminContent">
+                <!-- Dashboard -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h4>Total Orders</h4>
+                        <span id="totalOrders">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h4>Revenue (NPR)</h4>
+                        <span id="totalRevenue">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h4>Reservations</h4>
+                        <span id="totalReservations">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Loyalty Members</h4>
+                        <span id="totalMembers">0</span>
+                    </div>
+                </div>
+
+                <!-- Recent Orders Table -->
+                <div class="table-container">
+                    <h3>Recent Orders</h3>
+                    <table id="ordersTable">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
